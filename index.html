@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ef">
+  <title>拾光相册 · 把喜欢的瞬间放在一起</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="拾光相册首页"><span class="brand-mark">✳</span> 拾光 <span class="brand-light">相册</span></a>
+    <span class="top-note"><span class="status-dot"></span> 你的私人影像空间</span>
+  </header>
+
+  <main class="home-main">
+    <section class="intro">
+      <div class="eyebrow"><span>YOUR MOMENTS, YOUR STORY</span><i></i></div>
+      <h1>把喜欢的瞬间<br><em>放在一起。</em></h1>
+      <p class="intro-copy">上传照片，做一本属于你的数字相册。<br>让每一张照片，都有重新被看见的机会。</p>
+      <div class="intro-foot"><span>01</span><span class="foot-line"></span><span>创建你的相册</span></div>
+    </section>
+
+    <section class="editor-card" aria-label="创建相册">
+      <div class="card-head"><div><span class="step-label">STEP 01 / 02</span><h2>添加你的照片</h2></div><span class="photo-count" id="photoCount">0 张照片</span></div>
+      <label class="dropzone" id="dropzone" for="photoInput" tabindex="0">
+        <input id="photoInput" type="file" accept="image/*" multiple hidden>
+        <span class="upload-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 21V5m0 0L9.5 11.5M16 5l6.5 6.5M6 20v6h20v-6"/></svg></span>
+        <strong>把照片放在这里</strong>
+        <span class="drop-sub">或 <b>浏览文件</b> 选择图片</span>
+        <span class="drop-format">支持 JPG、PNG、WEBP 等格式</span>
+      </label>
+      <div class="preview-wrap" id="previewWrap" hidden>
+        <div class="preview-heading"><span>已加入相册</span><button class="text-button" id="clearPhotos" type="button">清空全部</button></div>
+        <div class="photo-grid" id="photoGrid"></div>
+      </div>
+      <div class="link-area">
+        <div class="link-top"><div><span class="step-label">STEP 02 / 02</span><h3>你的展示链接</h3></div><span class="link-lock">⌑ 仅此设备可访问</span></div>
+        <div class="link-row"><input id="shareUrl" type="text" readonly placeholder="添加照片后生成链接" aria-label="展示链接"><button id="previewAlbum" class="preview-button" type="button" disabled>预览相册 <span>↗</span></button><button id="copyLink" type="button" disabled>复制链接 <span>⧉</span></button></div>
+        <p class="link-hint" id="linkHint">链接打开后会以幻灯片形式播放相册中的照片。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>✳ 拾光相册</span><span>照片保存在你的浏览器中</span><span>MADE FOR YOUR MOMENTS</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

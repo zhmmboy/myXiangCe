@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171714">
+  <title>拾光相册 · 幻灯片</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="slide-page">
+  <header class="slide-topbar"><a class="brand" href="index.html"><span class="brand-mark">✳</span> 拾光 <span class="brand-light">相册</span></a><a class="back-link" href="index.html">← 返回编辑</a></header>
+  <main class="viewer" id="viewer">
+    <div class="viewer-meta"><span class="viewer-kicker">A COLLECTION OF MOMENTS</span><span class="counter" id="counter">01 <i>/</i> 01</span></div>
+    <div class="slide-stage" id="slideStage"><button class="nav-arrow prev" id="prev" aria-label="上一张">←</button><img id="slideImage" alt="相册照片"><button class="nav-arrow next" id="next" aria-label="下一张">→</button><div class="empty-view" id="emptyView" hidden><span>✳</span><h1>这里还没有照片</h1><p>回到编辑页，添加几张喜欢的照片吧。</p><a class="empty-button" href="index.html">去添加照片 <b>→</b></a></div></div>
+    <div class="viewer-controls"><div class="slide-caption"><span id="photoName">—</span><span id="playState">点击播放，慢慢回味</span></div><div class="control-buttons"><button id="playPause" class="play-button" aria-label="播放幻灯片"><span id="playIcon">▶</span></button><button id="fullScreen" class="fullscreen-button" aria-label="全屏">⛶</button></div></div>
+    <div class="progress-track"><div id="progressBar"></div></div>
+    <div class="filmstrip" id="filmstrip" aria-label="照片缩略图"></div>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="slideshow.js"></script>
+</body>
+</html>
